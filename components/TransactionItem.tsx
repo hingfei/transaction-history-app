@@ -1,6 +1,7 @@
 import { View, TouchableOpacity } from "react-native";
 import { Transaction } from "@/api/models/Transaction";
 import ThemedText from "@/components/ui/ThemedText";
+import { useRouter } from "expo-router";
 
 type TransactionItemProps = {
     transaction: Transaction;
@@ -8,6 +9,8 @@ type TransactionItemProps = {
 };
 
 export default function TransactionItem({ transaction, amountVisible }: TransactionItemProps) {
+    const router = useRouter();
+
     const formatDate = (date: string) =>
         new Date(date).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 
@@ -16,8 +19,11 @@ export default function TransactionItem({ transaction, amountVisible }: Transact
     };
 
     return (
-        <TouchableOpacity className="bg-white px-4 py-3">
-            <View className="flex-row flex justify-between items-center">
+        <TouchableOpacity
+            className="bg-white px-4 py-3"
+            onPress={() => router.push(`/transactions/${transaction.id}`)}
+        >
+            <View className="flex-row flex justify-between items-center w-full">
                 <View>
                     <ThemedText className="text-lg font-semibold mb-1">
                         {transaction.description}
@@ -31,7 +37,7 @@ export default function TransactionItem({ transaction, amountVisible }: Transact
                         {amountVisible ? (
                             <ThemedText
                                 className={`text-lg ${
-                                    transaction.amount < 0 ? "text-red-500" : "text-green-500"
+                                    transaction.amount < 0 ? "text-error" : "text-success"
                                 }`}
                             >
                                 {formatAmount(transaction.amount)}

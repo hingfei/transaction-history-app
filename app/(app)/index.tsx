@@ -12,9 +12,9 @@ import { Transaction } from "@/api/models/Transaction";
 import ThemedText from "@/components/ui/ThemedText";
 import TransactionItem from "@/components/TransactionItem";
 import { MaterialIcons } from "@expo/vector-icons";
-import { Colors } from "@/lib/contants";
+import { Colors } from "@/lib/constants";
 import FilterModal from "@/components/FilterModal";
-import * as LocalAuthentication from "expo-local-authentication";
+import { useRevealAmount } from "@/lib/hooks/useRevealAmount";
 
 export default function HomeScreen() {
     const [sections, setSections] = useState<{ title: string; data: Transaction[] }[]>([]);
@@ -26,8 +26,8 @@ export default function HomeScreen() {
     const [total, setTotal] = useState(0);
     const [filterType, setFilterType] = useState<"debit" | "credit" | undefined>(undefined);
 
-    const [amountVisible, setAmountVisible] = useState(false);
     const [filterModalVisible, setFilterModalVisible] = useState(false);
+    const { amountVisible, revealAmount } = useRevealAmount();
 
     const PER_PAGE = 10;
     const totalPages = Math.ceil(total / PER_PAGE);
@@ -89,21 +89,6 @@ export default function HomeScreen() {
         fetchData();
     };
 
-
-    const handleRevealAmount = async () => {
-        if (amountVisible) {
-            setAmountVisible(false);
-        } else {
-            const result = await LocalAuthentication.authenticateAsync({
-                promptMessage: "Reveal Amount",
-                fallbackLabel: "Use Passcode",
-            });
-            if (result.success) {
-                setAmountVisible(true);
-            }
-        }
-    };
-
     const handleFilter = (type: "debit" | "credit" | undefined) => {
         setFilterType(type);
         setPage(1);
@@ -143,7 +128,7 @@ export default function HomeScreen() {
                     <View className="flex-row justify-between items-center px-4 py-3">
                         <ThemedText type="title">Recent Transactions</ThemedText>
                         <View className={"flex-row flex gap-3"}>
-                            <TouchableOpacity onPress={handleRevealAmount}>
+                            <TouchableOpacity onPress={revealAmount}>
                                 <MaterialIcons
                                     name={amountVisible ? "visibility-off" : "visibility"}
                                     size={24}
@@ -158,7 +143,7 @@ export default function HomeScreen() {
                 }
             />
             {error && (
-                <ThemedText className="text-red-600 text-center mt-2 text-sm">{error}</ThemedText>
+                <ThemedText className="text-error text-center mt-2 text-sm">{error}</ThemedText>
             )}
 
             <Pagination page={page} totalPages={totalPages} setPage={setPage} />

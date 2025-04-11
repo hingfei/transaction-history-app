@@ -43,4 +43,15 @@ export class TransactionService {
             throw new Error("Failed to fetch transactions");
         }
     }
+
+    static async fetchTransactionById(id: string): Promise<Transaction> {
+        try {
+            // In real life scenario we should fetch the transaction by passing the id to api
+            const { transactions} = await this.fetchTransactions();
+
+            return transactions.find((t) => t.id === id) as Transaction;
+        } catch (error) {
+            throw new Error("Failed to fetch transaction");
+        }
+    }
 }
