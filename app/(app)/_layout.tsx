@@ -1,8 +1,8 @@
-// app/(app)/_layout.tsx
 import { Stack, useRouter, Redirect } from "expo-router";
 import { useAuth } from "@/contexts/AuthContext";
-import { Text } from "react-native";
 import { Colors } from "@/lib/contants";
+import { TouchableOpacity } from "react-native";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function AppLayout() {
     const { isAuthenticated, logout } = useAuth();
@@ -19,12 +19,14 @@ export default function AppLayout() {
                 headerTintColor: "#FFFFFF",
                 headerTitleStyle: { fontWeight: "bold" },
                 headerRight: () => (
-                    <Text onPress={() => {
-                        logout();
-                        router.replace("/login");
-                    }} className="text-white mr-4">
-                        Logout
-                    </Text>
+                    <TouchableOpacity
+                        onPress={() => {
+                            logout();
+                            router.replace("/login");
+                        }}
+                    >
+                        <MaterialIcons name="logout" size={24} color={"#ffffff"} />
+                    </TouchableOpacity>
                 ),
             }}
         >

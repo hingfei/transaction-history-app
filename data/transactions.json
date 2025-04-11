@@ -1,212 +1,215 @@
-[
-    {
-        "id": "1",
-        "amount": 150.75,
-        "date": "2025-04-09T10:30:00",
-        "description": "Grocery Store",
-        "type": "debit",
-        "transfer_to": "FreshMart",
-        "status": "success",
-        "transaction_id": "TXN-001-20250409"
-    },
-    {
-        "id": "2",
-        "amount": 45.99,
-        "date": "2025-04-09T09:15:00",
-        "description": "Coffee Shop",
-        "type": "debit",
-        "transfer_to": "BeanBuzz",
-        "status": "success",
-        "transaction_id": "TXN-002-20250409"
-    },
-    {
-        "id": "3",
-        "amount": 2000.0,
-        "date": "2025-04-08T15:45:00",
-        "description": "Salary Deposit",
-        "type": "credit",
-        "transfer_to": "Employer Inc.",
-        "status": "success",
-        "transaction_id": "TXN-003-20250408"
-    },
-    {
-        "id": "4",
-        "amount": 300.0,
-        "date": "2025-04-08T12:00:00",
-        "description": "Utility Bill",
-        "type": "debit",
-        "transfer_to": "PowerCo",
-        "status": "success",
-        "transaction_id": "TXN-004-20250408"
-    },
-    {
-        "id": "5",
-        "amount": 75.5,
-        "date": "2025-04-07T18:20:00",
-        "description": "Online Shopping",
-        "type": "debit",
-        "transfer_to": "ShopOnline",
-        "status": "success",
-        "transaction_id": "TXN-005-20250407"
-    },
-    {
-        "id": "6",
-        "amount": 25.0,
-        "date": "2025-04-07T08:50:00",
-        "description": "Bus Fare",
-        "type": "debit",
-        "transfer_to": "CityTransit",
-        "status": "success",
-        "transaction_id": "TXN-006-20250407"
-    },
-    {
-        "id": "7",
-        "amount": 1200.0,
-        "date": "2025-04-06T14:10:00",
-        "description": "Freelance Payment",
-        "type": "credit",
-        "transfer_to": "ClientX",
-        "status": "success",
-        "transaction_id": "TXN-007-20250406"
-    },
-    {
-        "id": "8",
-        "amount": 89.99,
-        "date": "2025-04-06T16:30:00",
-        "description": "Restaurant",
-        "type": "debit",
-        "transfer_to": "TasteHaven",
-        "status": "success",
-        "transaction_id": "TXN-008-20250406"
-    },
-    {
-        "id": "9",
-        "amount": 500.0,
-        "date": "2025-04-05T11:25:00",
-        "description": "Rent Payment",
-        "type": "debit",
-        "transfer_to": "Landlord Jane",
-        "status": "success",
-        "transaction_id": "TXN-009-20250405"
-    },
-    {
-        "id": "10",
-        "amount": 15.75,
-        "date": "2025-04-05T13:40:00",
-        "description": "Snack Vendor",
-        "type": "debit",
-        "transfer_to": "QuickBites",
-        "status": "success",
-        "transaction_id": "TXN-010-20250405"
-    },
-    {
-        "id": "11",
-        "amount": 2500.0,
-        "date": "2025-04-04T09:00:00",
-        "description": "Bonus",
-        "type": "credit",
-        "transfer_to": "Employer Inc.",
-        "status": "success",
-        "transaction_id": "TXN-011-20250404"
-    },
-    {
-        "id": "12",
-        "amount": 60.0,
-        "date": "2025-04-04T17:15:00",
-        "description": "Gym Membership",
-        "type": "debit",
-        "transfer_to": "FitZone",
-        "status": "pending",
-        "transaction_id": "TXN-012-20250404"
-    },
-    {
-        "id": "13",
-        "amount": 35.2,
-        "date": "2025-04-03T10:45:00",
-        "description": "Bookstore",
-        "type": "debit",
-        "transfer_to": "ReadWell",
-        "status": "success",
-        "transaction_id": "TXN-013-20250403"
-    },
-    {
-        "id": "14",
-        "amount": 100.0,
-        "date": "2025-04-03T14:55:00",
-        "description": "Gift Card",
-        "type": "credit",
-        "transfer_to": "Friend Alex",
-        "status": "success",
-        "transaction_id": "TXN-014-20250403"
-    },
-    {
-        "id": "15",
-        "amount": 220.45,
-        "date": "2025-04-02T19:10:00",
-        "description": "Electronics Store",
-        "type": "debit",
-        "transfer_to": "TechTrend",
-        "status": "success",
-        "transaction_id": "TXN-015-20250402"
-    },
-    {
-        "id": "16",
-        "amount": 80.0,
-        "date": "2025-04-02T12:35:00",
-        "description": "Taxi Ride",
-        "type": "debit",
-        "transfer_to": "CityCabs",
-        "status": "success",
-        "transaction_id": "TXN-016-20250402"
-    },
-    {
-        "id": "17",
-        "amount": 1500.0,
-        "date": "2025-04-01T08:20:00",
-        "description": "Consulting Fee",
-        "type": "credit",
-        "transfer_to": "ClientY",
-        "status": "success",
-        "transaction_id": "TXN-017-20250401"
-    },
-    {
-        "id": "18",
-        "amount": 12.99,
-        "date": "2025-04-01T15:50:00",
-        "description": "Streaming Subscription",
-        "type": "debit",
-        "transfer_to": "StreamNow",
-        "status": "success",
-        "transaction_id": "TXN-018-20250401"
-    },
-    {
-        "id": "19",
-        "amount": 95.6,
-        "date": "2025-03-31T11:05:00",
-        "description": "Pharmacy",
-        "type": "debit",
-        "transfer_to": "HealthPlus",
-        "status": "success",
-        "transaction_id": "TXN-019-20250331"
-    },
-    {
-        "id": "20",
-        "amount": 40.0,
-        "date": "2025-03-31T09:30:00",
-        "description": "Parking Fee",
-        "type": "debit",
-        "transfer_to": "ParkEasy",
-        "status": "success",
-        "transaction_id": "TXN-020-20250331"
-    },
-    {
-        "id": "21",
-        "amount": 180.25,
-        "date": "2025-03-30T16:00:00",
-        "description": "Clothing Store",
-        "type": "debit",
-        "transfer_to": "FashionHub",
-        "status": "pending",
-        "transaction_id": "TXN-021-20250330"
-    }
-]
+{
+    "total": 21,
+    "transactions": [
+        {
+            "id": "1",
+            "amount": -150.75,
+            "date": "2025-04-09T10:30:00",
+            "description": "Grocery Store",
+            "type": "debit",
+            "transfer_to": "FreshMart",
+            "status": "success",
+            "transaction_id": "TXN-001-20250409"
+        },
+        {
+            "id": "2",
+            "amount": -45.99,
+            "date": "2025-04-09T09:15:00",
+            "description": "Coffee Shop",
+            "type": "debit",
+            "transfer_to": "BeanBuzz",
+            "status": "success",
+            "transaction_id": "TXN-002-20250409"
+        },
+        {
+            "id": "3",
+            "amount": 2000.0,
+            "date": "2025-04-08T15:45:00",
+            "description": "Salary Deposit",
+            "type": "credit",
+            "transfer_to": "Employer Inc.",
+            "status": "success",
+            "transaction_id": "TXN-003-20250408"
+        },
+        {
+            "id": "4",
+            "amount": -300.0,
+            "date": "2025-04-08T12:00:00",
+            "description": "Utility Bill",
+            "type": "debit",
+            "transfer_to": "PowerCo",
+            "status": "success",
+            "transaction_id": "TXN-004-20250408"
+        },
+        {
+            "id": "5",
+            "amount": -75.5,
+            "date": "2025-04-07T18:20:00",
+            "description": "Online Shopping",
+            "type": "debit",
+            "transfer_to": "ShopOnline",
+            "status": "success",
+            "transaction_id": "TXN-005-20250407"
+        },
+        {
+            "id": "6",
+            "amount": -25.0,
+            "date": "2025-04-07T08:50:00",
+            "description": "Bus Fare",
+            "type": "debit",
+            "transfer_to": "CityTransit",
+            "status": "success",
+            "transaction_id": "TXN-006-20250407"
+        },
+        {
+            "id": "7",
+            "amount": 1200.0,
+            "date": "2025-04-06T14:10:00",
+            "description": "Freelance Payment",
+            "type": "credit",
+            "transfer_to": "ClientX",
+            "status": "success",
+            "transaction_id": "TXN-007-20250406"
+        },
+        {
+            "id": "8",
+            "amount": -89.99,
+            "date": "2025-04-06T16:30:00",
+            "description": "Restaurant Charge",
+            "type": "credit",
+            "transfer_to": "TasteHaven",
+            "status": "success",
+            "transaction_id": "TXN-008-20250406"
+        },
+        {
+            "id": "9",
+            "amount": -500.0,
+            "date": "2025-04-05T11:25:00",
+            "description": "Rent Payment",
+            "type": "debit",
+            "transfer_to": "Landlord Jane",
+            "status": "success",
+            "transaction_id": "TXN-009-20250405"
+        },
+        {
+            "id": "10",
+            "amount": -15.75,
+            "date": "2025-04-05T13:40:00",
+            "description": "Snack Vendor",
+            "type": "debit",
+            "transfer_to": "QuickBites",
+            "status": "success",
+            "transaction_id": "TXN-010-20250405"
+        },
+        {
+            "id": "11",
+            "amount": 2500.0,
+            "date": "2025-04-04T09:00:00",
+            "description": "Bonus",
+            "type": "credit",
+            "transfer_to": "Employer Inc.",
+            "status": "success",
+            "transaction_id": "TXN-011-20250404"
+        },
+        {
+            "id": "12",
+            "amount": -60.0,
+            "date": "2025-04-04T17:15:00",
+            "description": "Gym Membership",
+            "type": "debit",
+            "transfer_to": "FitZone",
+            "status": "pending",
+            "transaction_id": "TXN-012-20250404"
+        },
+        {
+            "id": "13",
+            "amount": -35.2,
+            "date": "2025-04-03T10:45:00",
+            "description": "Bookstore",
+            "type": "debit",
+            "transfer_to": "ReadWell",
+            "status": "success",
+            "transaction_id": "TXN-013-20250403"
+        },
+        {
+            "id": "14",
+            "amount": -100.0,
+            "date": "2025-04-03T14:55:00",
+            "description": "Credit Card Refund",
+            "type": "credit",
+            "transfer_to": "Friend Alex",
+            "status": "success",
+            "transaction_id": "TXN-014-20250403"
+        },
+        {
+            "id": "15",
+            "amount": -220.45,
+            "date": "2025-04-02T19:10:00",
+            "description": "Electronics Store",
+            "type": "debit",
+            "transfer_to": "TechTrend",
+            "status": "success",
+            "transaction_id": "TXN-015-20250402"
+        },
+        {
+            "id": "16",
+            "amount": -80.0,
+            "date": "2025-04-02T12:35:00",
+            "description": "Taxi Ride",
+            "type": "debit",
+            "transfer_to": "CityCabs",
+            "status": "success",
+            "transaction_id": "TXN-016-20250402"
+        },
+        {
+            "id": "17",
+            "amount": 1500.0,
+            "date": "2025-04-01T08:20:00",
+            "description": "Consulting Fee",
+            "type": "credit",
+            "transfer_to": "ClientY",
+            "status": "success",
+            "transaction_id": "TXN-017-20250401"
+        },
+        {
+            "id": "18",
+            "amount": -12.99,
+            "date": "2025-04-01T15:50:00",
+            "description": "Streaming Subscription",
+            "type": "debit",
+            "transfer_to": "StreamNow",
+            "status": "success",
+            "transaction_id": "TXN-018-20250401"
+        },
+        {
+            "id": "19",
+            "amount": -95.6,
+            "date": "2025-03-31T11:05:00",
+            "description": "Pharmacy",
+            "type": "debit",
+            "transfer_to": "HealthPlus",
+            "status": "success",
+            "transaction_id": "TXN-019-20250331"
+        },
+        {
+            "id": "20",
+            "amount": -40.0,
+            "date": "2025-03-31T09:30:00",
+            "description": "Parking Fee",
+            "type": "debit",
+            "transfer_to": "ParkEasy",
+            "status": "success",
+            "transaction_id": "TXN-020-20250331"
+        },
+        {
+            "id": "21",
+            "amount": -180.25,
+            "date": "2025-03-30T16:00:00",
+            "description": "Clothing Store",
+            "type": "debit",
+            "transfer_to": "FashionHub",
+            "status": "pending",
+            "transaction_id": "TXN-021-20250330"
+        }
+    ]
+}

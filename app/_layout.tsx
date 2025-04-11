@@ -24,13 +24,7 @@ export default function RootLayout() {
 
     return (
         <AuthProvider>
-            <Stack
-                screenOptions={{
-                    headerStyle: { backgroundColor: "#1E3A8A" },
-                    headerTintColor: "#FFFFFF",
-                    headerTitleStyle: { fontWeight: "bold" },
-                }}
-            >
+            <Stack>
                 <Stack.Screen name="(app)" options={{ headerShown: false }} />
                 <Stack.Screen name="login" options={{ headerShown: false }} />
             </Stack>
