@@ -37,7 +37,7 @@ Requires macOS with Xcode installed:
 
 1. Install Xcode from the Mac App Store
 2. Install iOS Simulator through Xcode
-3. Download the build file from [EAS Build](https://expo.dev/artifacts/eas/vNJAMAZefoFDbayeDNc3Yt.tar.gz)
+3. Download the build file from [EAS Build](https://expo.dev/artifacts/eas/pUmTKGJxRQ5AQNBfxSk2N6.tar.gz)
 4. Unzip the build file and drag it into the simulator to run the app on the simulator
 5. Start the development server (make sure you are in the development build):
    ```bash
@@ -49,7 +49,7 @@ Requires macOS with Xcode installed:
 Requires Android Studio and Android SDK:
 
 1. Set up Android Studio and create an emulator
-2. Download and install the .apk build file from [EAS Build](https://expo.dev/accounts/hingfei99/projects/transaction-history-app/builds/1ad9aebc-d6fd-4e08-b8bb-32e20422af21)
+2. Download and install the .apk build file from [EAS Build](https://expo.dev/accounts/hingfei99/projects/transaction-history-app/builds/e45083a5-bfd6-471b-a053-ff664e1b5708)
 3. Launch the app and start the development server (make sure you are in the development build):
    ```bash
    npx expo start
