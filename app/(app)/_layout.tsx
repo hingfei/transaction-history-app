@@ -8,6 +8,11 @@ export default function AppLayout() {
     const { isAuthenticated, logout } = useAuth();
     const router = useRouter();
 
+    const handleLogout = () => {
+        logout();
+        router.replace("/login");
+    };
+
     if (!isAuthenticated) {
         return <Redirect href="/login" />;
     }
@@ -20,10 +25,8 @@ export default function AppLayout() {
                 headerTitleStyle: { fontWeight: "bold" },
                 headerRight: () => (
                     <TouchableOpacity
-                        onPress={() => {
-                            logout();
-                            router.replace("/login");
-                        }}
+                        className={"p-2.5 z-10"}
+                        onPressIn={handleLogout}
                     >
                         <MaterialIcons name="logout" size={24} color={"#ffffff"} />
                     </TouchableOpacity>
