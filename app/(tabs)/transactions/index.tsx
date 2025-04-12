@@ -16,7 +16,7 @@ import { Colors } from "@/lib/constants";
 import FilterModal from "@/components/FilterModal";
 import { useRevealAmount } from "@/lib/hooks/useRevealAmount";
 
-export default function HomeScreen() {
+export default function TransactionsListingScreen() {
     const [sections, setSections] = useState<{ title: string; data: Transaction[] }[]>([]);
     const [refreshing, setRefreshing] = useState(false);
     const [loading, setLoading] = useState(true);
@@ -82,6 +82,10 @@ export default function HomeScreen() {
 
     useEffect(() => {
         fetchData();
+    }, [])
+
+    useEffect(() => {
+        fetchData();
     }, [page, filterType]);
 
     const onRefresh = () => {
@@ -98,7 +102,7 @@ export default function HomeScreen() {
     if (loading && !refreshing) {
         return (
             <View className="flex-1 bg-white items-center justify-center">
-                <ActivityIndicator size="large" color={Colors.background} />
+                <ActivityIndicator size="large" color={Colors.primary} />
             </View>
         );
     }
@@ -107,7 +111,9 @@ export default function HomeScreen() {
         <SafeAreaView className="flex-1 bg-white">
             <SectionList
                 sections={sections}
-                renderItem={({ item }) => <TransactionItem transaction={item} amountVisible={amountVisible}/>}
+                renderItem={({ item }) => (
+                    <TransactionItem transaction={item} amountVisible={amountVisible} />
+                )}
                 renderSectionHeader={({ section: { title } }) => (
                     <View className="bg-purple-100 p-2">
                         <ThemedText className="font-semibold text-lg">{title}</ThemedText>
@@ -119,24 +125,24 @@ export default function HomeScreen() {
                     <RefreshControl
                         refreshing={refreshing}
                         onRefresh={onRefresh}
-                        tintColor={Colors.background}
-                        colors={[Colors.background]}
+                        tintColor={Colors.primary}
+                        colors={[Colors.primary]}
                         progressViewOffset={10}
                     />
                 }
                 ListHeaderComponent={
                     <View className="flex-row justify-between items-center px-4 py-3">
-                        <ThemedText type="title">Recent Transactions</ThemedText>
+                        <ThemedText type="title">Transactions</ThemedText>
                         <View className={"flex-row flex gap-3"}>
                             <TouchableOpacity onPress={revealAmount}>
                                 <MaterialIcons
                                     name={amountVisible ? "visibility-off" : "visibility"}
                                     size={24}
-                                    color={Colors.background}
+                                    color={Colors.primary}
                                 />
                             </TouchableOpacity>
                             <TouchableOpacity onPress={() => setFilterModalVisible(true)}>
-                                <MaterialIcons name="filter-alt" size={24} color={Colors.background} />
+                                <MaterialIcons name="filter-alt" size={24} color={Colors.primary} />
                             </TouchableOpacity>
                         </View>
                     </View>

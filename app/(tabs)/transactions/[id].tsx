@@ -86,7 +86,7 @@ export default function TransactionDetailsScreen() {
                             <MaterialIcons
                                 name={amountVisible ? "visibility-off" : "visibility"}
                                 size={18}
-                                color={Colors.background}
+                                color={Colors.primary}
                             />
                         </TouchableOpacity>
                     </View>

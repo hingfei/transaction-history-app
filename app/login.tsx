@@ -11,7 +11,7 @@ export default function LoginScreen() {
     const handleLogin = async () => {
         try {
             await login();
-            router.replace("/(app)");
+            router.replace("/");
         } catch (error) {
             Alert.alert("Login Failed", (error as Error).message || "Something went wrong.");
         }
@@ -27,7 +27,7 @@ export default function LoginScreen() {
                 onPress={handleLogin}
                 className={"bg-white px-4 py-3 rounded-lg flex flex-row items-center gap-x-2"}
             >
-                <ThemedText className={" font-bold text-xl"}>Login with Biometrics</ThemedText>
+                <ThemedText className={" font-bold text-xl"}>Login</ThemedText>
                 <MaterialIcons name="fingerprint" size={30} color="black" />
             </TouchableOpacity>
         </View>
