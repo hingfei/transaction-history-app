@@ -1,5 +1,5 @@
 import { View, ActivityIndicator, TouchableOpacity } from "react-native";
-import { useLocalSearchParams } from "expo-router";
+import { Redirect, useLocalSearchParams } from "expo-router";
 import { useState, useEffect } from "react";
 import { TransactionService } from "@/api/services/TransactionService";
 import { Transaction } from "@/api/models/Transaction";
@@ -8,8 +8,10 @@ import { useRevealAmount } from "@/lib/hooks/useRevealAmount";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Colors } from "@/lib/constants";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function TransactionDetailsScreen() {
+    const { isAuthenticated, logout } = useAuth();
     const { id } = useLocalSearchParams();
 
     const [transaction, setTransaction] = useState<Transaction | null>(null);
@@ -40,6 +42,10 @@ export default function TransactionDetailsScreen() {
     const formatDate = (date: string) => new Date(date).toLocaleString();
     const formatAmount = (amount: number) =>
         `${amount < 0 ? "-" : ""}RM ${Math.abs(amount).toFixed(2)}`;
+
+    if (!isAuthenticated) {
+        return <Redirect href="/login" />;
+    }
 
     if (loading) {
         return (

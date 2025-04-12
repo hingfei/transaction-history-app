@@ -21,7 +21,7 @@ export default function TransactionItem({ transaction, amountVisible }: Transact
     return (
         <TouchableOpacity
             className="bg-white px-4 py-3"
-            onPress={() => router.push(`/transactions/${transaction.id}`)}
+            onPress={() => router.push(`/transaction-details/${transaction.id}`)}
         >
             <View className="flex-row flex justify-between items-center w-full">
                 <View>

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import "./global.css";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { Colors } from "@/lib/constants";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -24,9 +25,22 @@ export default function RootLayout() {
 
     return (
         <AuthProvider>
-            <Stack>
+            <Stack
+                screenOptions={{
+                    headerStyle: { backgroundColor: Colors.primary },
+                    headerTitleStyle: { fontWeight: "bold" },
+                    headerTintColor: "#FFFFFF",
+                }}
+            >
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
                 <Stack.Screen name="login" options={{ headerShown: false }} />
+                <Stack.Screen
+                    name="transaction-details/[id]"
+                    options={{
+                        title: "Transaction Details",
+                        headerBackButtonDisplayMode: "generic",
+                    }}
+                />
             </Stack>
         </AuthProvider>
     );

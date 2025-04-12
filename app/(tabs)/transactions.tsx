@@ -82,10 +82,6 @@ export default function TransactionsListingScreen() {
 
     useEffect(() => {
         fetchData();
-    }, [])
-
-    useEffect(() => {
-        fetchData();
     }, [page, filterType]);
 
     const onRefresh = () => {

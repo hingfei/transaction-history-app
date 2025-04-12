@@ -4,7 +4,7 @@ import { Colors } from "@/lib/constants";
 import { Platform, TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
-export default function AppLayout() {
+export default function TabLayout() {
     const { isAuthenticated, logout } = useAuth();
     const router = useRouter();
 
@@ -25,15 +25,8 @@ export default function AppLayout() {
                     headerStyle: { backgroundColor: Colors.primary },
                     headerTitleStyle: { fontWeight: "bold" },
                     headerTintColor: "#FFFFFF",
-                    tabBarStyle: Platform.select({
-                        ios: {
-                            // Use a transparent background on iOS to show the blur effect
-                            position: 'absolute',
-                        },
-                        default: {},
-                    }),
                     headerRight: () => (
-                        <TouchableOpacity  className={"mr-4"} onPressIn={handleLogout}>
+                        <TouchableOpacity className={"mr-4"} onPressIn={handleLogout}>
                             <MaterialIcons name="logout" size={24} color={"#ffffff"} />
                         </TouchableOpacity>
                     ),
@@ -49,19 +42,12 @@ export default function AppLayout() {
                     }}
                 />
                 <Tabs.Screen
-                    name="transactions/index"
+                    name="transactions"
                     options={{
                         title: "Transaction",
                         tabBarIcon: ({ color, size }) => (
                             <MaterialIcons name="list" size={size} color={color} />
                         ),
-                    }}
-                />
-                <Tabs.Screen
-                    name="transactions/[id]"
-                    options={{
-                        title: "Transaction Details",
-                        href: null,
                     }}
                 />
             </Tabs>
