@@ -31,14 +31,24 @@ export class TransactionService {
 
             // To simulate pagination, should be passing queries to api in real scenario
             const total = filteredTransactions.length; // Total after filtering
-            const start = (page - 1) * perPage;
-            const end = start + perPage;
-            const paginatedTransactions = filteredTransactions.slice(start, end);
 
-            return {
-                total,
-                transactions: paginatedTransactions,
-            };
+            // If perPage is -1, fetch all
+            if (perPage === -1) {
+                return {
+                    total,
+                    transactions: filteredTransactions,
+                };
+            } else {
+                const start = (page - 1) * perPage;
+                const end = start + perPage;
+                const paginatedTransactions = filteredTransactions.slice(start, end);
+
+                return {
+                    total,
+                    transactions: paginatedTransactions,
+                };
+            }
+
         } catch (error) {
             throw new Error("Failed to fetch transactions");
         }
@@ -47,7 +57,7 @@ export class TransactionService {
     static async fetchTransactionById(id: string): Promise<Transaction> {
         try {
             // In real life scenario we should fetch the transaction by passing the id to api
-            const { transactions} = await this.fetchTransactions();
+            const { transactions} = await this.fetchTransactions(1, -1);
 
             return transactions.find((t) => t.id === id) as Transaction;
         } catch (error) {
